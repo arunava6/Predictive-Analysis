@@ -1,5 +1,6 @@
 data<-read.csv(file.choose(),stringsAsFactors = FALSE)
 View(data)
+summary(data)
 str(data)
 hist(data$strength,col = "Orange",border="white",xlab = "Strength",ylab = "Frequency",main="Strength graph")
 # apply normalize func() to make the value between the range 0-1
