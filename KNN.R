@@ -3,6 +3,7 @@ wbcd<-read.csv(file.choose(),stringsAsFactors = FALSE)
 str(wbcd)
 wbcd<-wbcd[-1]
 View(wbcd)
+
 table(wbcd$diagnosis)
 wbcd$diagnosis<- factor(wbcd$diagnosis,levels=c("B","M"),labels=c("Benign","Malignant"))
 prop<-round(prop.table(table(wbcd$diagnosis))*100,digits=1)
